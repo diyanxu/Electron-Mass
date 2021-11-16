@@ -1,0 +1,5 @@
+Current(A)(constant) Current_error(A) Volts(V) Volts_error(V) radius(cm) radius_error(cm)
+1.523 0.005 168.3 0.2 3.65 0.1
+1.523 0.005 199.8 0.2 3.9 0.1
+1.523 0.005 217.8 0.2 4.1 0.1
+1.523 0.005 314.5 0.3 4.85 0.1
