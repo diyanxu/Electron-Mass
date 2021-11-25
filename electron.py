@@ -33,17 +33,18 @@ if __name__ == "__main__":
                                           ((0.0025/0.15)**2))
     
     #Curve_fit on field_coil_r_func for external field, b
-    popt, pcov = curve_fit(field_coil_r_func, 1/voltage_const_rad,
+    popt, pcov = curve_fit(field_coil_r_func, 1/(voltage_const_rad/100),
                            field_coil, sigma=field_coil_error, 
                            absolute_sigma=True)
-
-    print('slope = ', popt[0], ', intercept = ', popt[1])
-
+    pstd = np.sqrt(np.diag(pcov))
+    
+    print('slope = ', popt[0], '+-', pstd[0],', intercept = ', popt[1],'+-', 
+          pstd[1])
     # plot code if needed
-    """
+    '''
     #model data
-    field_coil_r = field_coil_r_func(1/voltage_const_rad, popt[0], popt[1])
+    field_coil_r = field_coil_r_func(1/(voltage_const_rad/100), popt[0], popt[1])
     
     #plot
     plt.plot(1/voltage_const_rad, field_coil_r)
-    """
+    '''
