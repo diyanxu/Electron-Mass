@@ -11,16 +11,6 @@ def field_coil_func(x):
     return ((4/5)**(3/2))*4*np.pi*(10**(-7))*130*x/0.15
 
 
-# Function for error calculation
-def field_coil_error_func(a, b, c):
-    return a*np.sqrt(((c/b)**2)+((0.0025/0.15)**2))
-
-
-# Model function for constant voltage
-def volt_model():
-    return None
-
-
 # main function
 if __name__ == "__main__":
     # loading data
