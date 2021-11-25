@@ -22,10 +22,27 @@ The purpose of this experiment was to determine the charge to mass ratio of an
 electron. This is done by measuring data of electrons which were shot into
 an electromagnetic field and measuring the radius of the resulting circle
 formed by the electrons. The relation is shown as the following
-\begin{align*}
-    \text{insert equation here}
-\end{align*}
-% add more?
+\begin{align}
+    /frac{1}{r} = \sqrt{\frac{e}{2m}}\frac{B}{\sqrt{V}}
+\end{align}
+Where $r$ is the radius of the electron curvature orbit, $V$ is the voltage at
+which the electron is accelerated through and $B$ is the electromagnetic field
+which can be broken down to $B_c + B_e$.
+$B_c$ being the electromagnetic field generated from the coils and $B_e$ being
+the external electromagnetic field from the earth, buildings and other 
+equipment/devices. Expanding this we can get our equation to be
+\begin{align}
+    \frac{1}{r} = \sqrt{\frac{e}{2m}} \frac{1}{\sqrt{V}}\big(B_c + B_e\big)
+\end{align}
+To determine the charge to mass ratio of en electron we would have to take
+datapoints on the radius of the electron orbit with either constant voltage and
+varying current, or constant current and varying voltage. In this excercise we
+will be using constant voltage and varying current. To determine the ratio we
+would first need to rearrange equation (2) and rewrite for $B_c$ to be a function
+of $\frac{1}{r}$. Doing so we would get
+\begin{align}
+    B_c = \sqrt{\frac{2mV}{e}}\frac{1}{r} - B_e
+\end{align}
 
 \section{Methods}
 Equipment used for the experiment are as follows
