@@ -8,12 +8,12 @@ def field_coil_r_func(x, a, b):
 
 #Function to calculate coil electromagnetic field
 def field_coil_func(x):
-    return ((4/5)**(3/2))*4*np.pi*(10**(-7))*130*x/0.155
+    return ((4/5)**(3/2))*4*np.pi*(10**(-7))*130*x/0.15
 
 
 # Function for error calculation
 def field_coil_error_func(a, b, c):
-    return a*np.sqrt(((c/b)**2)+((0.0025/0.155)**2))
+    return a*np.sqrt(((c/b)**2)+((0.0025/0.15)**2))
 
 
 # Model function for constant voltage
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     field_coil = field_coil_func(voltage_const_currents)
     field_coil_error = field_coil*np.sqrt(((voltage_const_currents_error
                                             /voltage_const_currents)**2)+
-                                          ((0.0025/0.155)**2))
+                                          ((0.0025/0.15)**2))
     
     #Curve_fit on field_coil_r_func for external field, b
     popt, pcov = curve_fit(field_coil_r_func, 1/voltage_const_rad,
